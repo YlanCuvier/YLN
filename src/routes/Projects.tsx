@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import PageContainer from '../components/common/PageContainer';
+import TypedText from '../components/common/TypedText';
 import ProjectCard from '../components/projects/ProjectCard';
 import projectsData from '../content/projects.json';
 import { usePageMeta } from '../hooks/usePageMeta';
@@ -32,17 +33,20 @@ export default function ProjectsPage() {
     <PageContainer
       title="Projects"
       subtitle="A command-driven archive of shipped product work, organized by stack and delivery context."
+      fileName="projects.tsx"
+      commandHint=":open projects.tsx"
+      statusHint={`[${visibleProjects.length}] matches`}
     >
-      <section id="projects-overview" className="scroll-mt-40 rounded-xl border border-[#1a3323] bg-[#07110b]/95 p-5 font-body sm:p-6">
-        <p className="mb-3 text-[11px] uppercase tracking-[0.2em] text-cold">ls -la ./projects</p>
-        <p className="max-w-3xl text-sm leading-relaxed text-frost">
+      <section id="projects-overview" className="scroll-mt-36 rounded-sm border border-[#4f4232] bg-[#17130f]/95 p-5 font-body sm:p-6">
+        <TypedText text="ls -la ./projects" className="mb-3 text-[11px] uppercase tracking-[0.2em] text-[#fabd2f]" speed={16} delay={140} />
+        <p className="max-w-3xl text-sm leading-relaxed text-[#d5c4a1]">
           Use filters to narrow the list. Each item shows context, tools, and links, formatted like editor buffers for fast
           scanning.
         </p>
       </section>
 
-      <section id="projects-filters" className="scroll-mt-40 space-y-3 rounded-xl border border-[#1a3323] bg-[#07110b]/95 p-5 font-body sm:p-6">
-        <p className="text-[11px] uppercase tracking-[0.2em] text-warm">:filter tech</p>
+      <section id="projects-filters" className="scroll-mt-36 space-y-3 rounded-sm border border-[#4f4232] bg-[#17130f]/95 p-5 font-body sm:p-6">
+        <TypedText text=":filter tech" className="text-[11px] uppercase tracking-[0.2em] text-[#b8bb26]" speed={16} delay={180} />
         <div className="flex flex-wrap gap-2">
           {tags.map((tag) => (
             <button
@@ -50,10 +54,10 @@ export default function ProjectsPage() {
               type="button"
               onClick={() => setActiveTag(tag)}
               className={[
-                'rounded border px-3 py-1.5 text-[11px] uppercase tracking-[0.16em] transition',
+                'rounded-sm border px-3 py-1.5 text-[11px] uppercase tracking-[0.16em] transition',
                 activeTag === tag
-                  ? 'border-cold bg-cold/15 text-ivory shadow-glow'
-                  : 'border-[#244a33] text-frost hover:border-frost/40 hover:text-ivory',
+                  ? 'border-[#fabd2f] bg-[#3c3836] text-[#fbf1c7] shadow-glow'
+                  : 'border-[#665c54] text-[#d5c4a1] hover:border-[#a89984] hover:text-[#fbf1c7]',
               ].join(' ')}
             >
               {tag}
@@ -62,7 +66,7 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <section id="projects-gallery" className="scroll-mt-40">
+      <section id="projects-gallery" className="scroll-mt-36">
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {visibleProjects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />

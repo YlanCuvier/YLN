@@ -2,20 +2,20 @@
   --font-display: 'JetBrains Mono', 'Fira Code', 'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
   --font-body: 'JetBrains Mono', 'Fira Code', 'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
 
-  --color-night: #040805;
-  --color-dusk: #08110b;
-  --color-ash: #0d1912;
-  --color-ivory: #d7f7df;
-  --color-frost: #8ab59a;
-  --color-cold: #63d48d;
-  --color-warm: #ffcf7a;
+  --color-night: #12100e;
+  --color-dusk: #1d1a17;
+  --color-ash: #2b2621;
+  --color-ivory: #fbf1c7;
+  --color-frost: #d5c4a1;
+  --color-cold: #b8bb26;
+  --color-warm: #fabd2f;
 
-  --color-border: #1a3323;
-  --color-panel: #07100a;
-  --color-panel-soft: #0a160f;
+  --color-border: #5a4b39;
+  --color-panel: #1a1610;
+  --color-panel-soft: #241f18;
 }
 
 ::selection {
-  background-color: rgba(99, 212, 141, 0.28);
-  color: var(--color-ivory);
+  background-color: rgba(250, 189, 47, 0.25);
+  color: #fff8dc;
 }

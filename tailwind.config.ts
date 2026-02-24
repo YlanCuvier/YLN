@@ -18,8 +18,8 @@ export default {
         body: ['JetBrains Mono', 'Fira Code', 'IBM Plex Mono', 'monospace'],
       },
       boxShadow: {
-        card: '0 20px 45px rgba(0, 0, 0, 0.55)',
-        glow: '0 0 0 1px rgba(99, 212, 141, 0.35), 0 8px 36px rgba(99, 212, 141, 0.2)',
+        card: '0 18px 46px rgba(0, 0, 0, 0.52)',
+        glow: '0 0 0 1px rgba(250, 189, 47, 0.4), 0 10px 28px rgba(250, 189, 47, 0.18)',
       },
       keyframes: {
         drift: {
