@@ -169,6 +169,14 @@
         </div>
       </section>
     </main>
+
+    <ScrollIsland title="Section Navigator" :height="184" :scroll-threshold="80">
+      <nav class="island-links" aria-label="Section shortcuts">
+        <a v-for="link in islandLinks" :key="link.href" class="island-link" :href="link.href">
+          {{ link.label }}
+        </a>
+      </nav>
+    </ScrollIsland>
   </div>
 </template>
 
@@ -176,6 +184,7 @@
 import AnimatedBackground from './components/AnimatedBackground.vue'
 import InteractiveGridPattern from './components/InteractiveGridPattern.vue'
 import ShaderToy from './components/ShaderToy.vue'
+import ScrollIsland from './components/ScrollIsland.vue'
 
 const shaderCode = 'inspira-silk-shader'
 
@@ -282,6 +291,13 @@ const technicalSkills = [
     title: 'Systems',
     items: ['Linux', 'Bash', 'Shell scripting']
   }
+]
+
+const islandLinks = [
+  { label: 'Work', href: '#work' },
+  { label: 'Journey', href: '#journey' },
+  { label: 'Stack', href: '#stack' },
+  { label: 'Connect', href: '#connect' }
 ]
 </script>
 
@@ -913,6 +929,36 @@ ul {
 .contact-card strong {
   font-size: 0.92rem;
   line-height: 1.35;
+}
+
+.island-links {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.island-link {
+  text-decoration: none;
+  border-radius: 0.72rem;
+  border: 1px solid rgb(230 222 205 / 0.22);
+  background: rgb(255 255 255 / 0.05);
+  color: var(--text-strong);
+  padding: 0.46rem 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  font-weight: 700;
+  transition: transform 170ms ease, border-color 170ms ease, background-color 170ms ease;
+}
+
+.island-link:hover {
+  transform: translateY(-1px);
+  border-color: var(--line-strong);
+  background: rgb(255 255 255 / 0.1);
+}
+
+.island-link:focus-visible {
+  outline: 2px solid rgb(128 235 217 / 0.82);
+  outline-offset: 2px;
 }
 
 .reveal {

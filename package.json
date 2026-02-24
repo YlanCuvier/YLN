@@ -10,6 +10,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@number-flow/vue": "^0.4.12",
     "@vueuse/core": "^10.4.1",
     "lucide-vue-next": "^0.292.0",
     "vue": "^3.3.4"
