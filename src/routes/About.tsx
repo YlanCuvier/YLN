@@ -6,28 +6,30 @@ import type { Profile } from '../types/content';
 
 const profile = profileData as Profile;
 
-const principles = [
+const profileSections = [
   {
-    title: 'Signal Over Noise',
-    detail: 'I prioritize interfaces that make important product decisions obvious in seconds, not minutes.',
+    title: 'Professional Experience',
+    detail:
+      'Fullstack Web Developer at ISART Digital (September 2024 - December 2024): intranet redesign in PHP/Twig, mobile web app in Vue.js/Nuxt.js connected to a PHP back end, and UX/performance collaboration with technical teams.',
   },
   {
-    title: 'Narrative Through Motion',
-    detail: 'Motion is used to guide attention and explain state changes, not as visual decoration.',
+    title: 'Education',
+    detail:
+      'Master in Computer Science (in progress) at EPITECH (2023 - 2028). General Baccalaureate at Lycee Claude Monet (2020 - 2023), with specialties in Mathematics and Life and Earth Sciences.',
   },
   {
-    title: 'Resilience By Default',
-    detail: 'I design components and architecture for long-term maintainability under changing product demands.',
+    title: 'Languages and Interests',
+    detail: 'French (native), English (B2), German (B1). Interests: climbing, volleyball, and hiking.',
   },
 ];
 
 export default function AboutPage() {
-  usePageMeta('About', 'Background, design principles, and social links for Elias Vance.');
+  usePageMeta('About', 'Background, experience, education, and contact links for Ylan Cuvier.');
 
   return (
     <PageContainer
       title="About"
-      subtitle="Building precise product systems that feel fast, legible, and durable under load."
+      subtitle={profile.headline}
       fileName="about.tsx"
       commandHint=":open about.tsx"
       statusHint="[+] profile loaded"
@@ -55,8 +57,8 @@ export default function AboutPage() {
               <li key={social.label}>
                 <a
                   href={social.url}
-                  target={social.url.startsWith('mailto:') ? undefined : '_blank'}
-                  rel={social.url.startsWith('mailto:') ? undefined : 'noreferrer'}
+                  target={social.url.startsWith('http') ? '_blank' : undefined}
+                  rel={social.url.startsWith('http') ? 'noreferrer' : undefined}
                   className="flex items-center justify-between rounded-sm border border-transparent px-2 py-1 text-sm text-[#d5c4a1] transition hover:border-[#665c54] hover:bg-[#24201b] hover:text-[#fbf1c7]"
                 >
                   <span>{social.label}</span>
@@ -69,9 +71,14 @@ export default function AboutPage() {
       </section>
 
       <section id="about-principles" className="scroll-mt-36 space-y-3">
-        <TypedText text="set principles=3" className="font-body text-[11px] uppercase tracking-[0.2em] text-[#b8bb26]" speed={16} delay={220} />
+        <TypedText
+          text="set profile_sections=3"
+          className="font-body text-[11px] uppercase tracking-[0.2em] text-[#b8bb26]"
+          speed={16}
+          delay={220}
+        />
         <div className="grid gap-4 md:grid-cols-3">
-          {principles.map((item, index) => (
+          {profileSections.map((item, index) => (
             <article key={item.title} className="rounded-sm border border-[#4f4232] bg-[#17130f]/95 p-5 font-body">
               <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-[#a89984]">0{index + 1}</p>
               <h2 className="mb-2 text-base uppercase tracking-[0.12em] text-[#fbf1c7]">{item.title}</h2>

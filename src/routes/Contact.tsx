@@ -10,13 +10,13 @@ const contactInfo = contactData as ContactInfo;
 const profile = profileData as Profile;
 
 function buildMailto(name: string, email: string, message: string) {
-  const subject = encodeURIComponent(`Portfolio inquiry from ${name}`);
+  const subject = encodeURIComponent(`Internship / freelance contact from ${name}`);
   const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
   return `mailto:${contactInfo.email}?subject=${subject}&body=${body}`;
 }
 
 export default function ContactPage() {
-  usePageMeta('Contact', 'Reach Elias Vance for frontend and product engineering opportunities.');
+  usePageMeta('Contact', 'Reach Ylan Cuvier for internship opportunities, freelance work, and collaboration.');
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -30,7 +30,7 @@ export default function ContactPage() {
   return (
     <PageContainer
       title="Contact"
-      subtitle="Open a message buffer for projects, collaboration, or senior frontend/product engineering opportunities."
+      subtitle="Open a message buffer for internship opportunities, freelance work, or technical collaboration."
       fileName="contact.tsx"
       commandHint=":open contact.tsx"
       statusHint="[+] mailbox ready"
@@ -94,6 +94,14 @@ export default function ContactPage() {
           >
             {contactInfo.email}
           </a>
+          {contactInfo.phone ? (
+            <a
+              href={`tel:${contactInfo.phone.replace(/\s+/g, '')}`}
+              className="block rounded-sm border border-transparent px-2 py-1 text-sm text-[#d5c4a1] transition hover:border-[#665c54] hover:bg-[#24201b] hover:text-[#fbf1c7]"
+            >
+              {contactInfo.phone}
+            </a>
+          ) : null}
           {contactInfo.location ? <p className="px-2 text-sm text-[#d5c4a1]">{contactInfo.location}</p> : null}
           {contactInfo.availability ? <p className="px-2 text-sm text-[#d5c4a1]">{contactInfo.availability}</p> : null}
 
@@ -104,8 +112,8 @@ export default function ContactPage() {
                 <li key={social.label}>
                   <a
                     href={social.url}
-                    target={social.url.startsWith('mailto:') ? undefined : '_blank'}
-                    rel={social.url.startsWith('mailto:') ? undefined : 'noreferrer'}
+                    target={social.url.startsWith('http') ? '_blank' : undefined}
+                    rel={social.url.startsWith('http') ? 'noreferrer' : undefined}
                     className="flex items-center justify-between rounded-sm border border-transparent px-2 py-1 text-sm text-[#d5c4a1] transition hover:border-[#665c54] hover:bg-[#24201b] hover:text-[#fbf1c7]"
                   >
                     <span>{social.label}</span>

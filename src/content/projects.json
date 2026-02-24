@@ -1,52 +1,34 @@
 [
   {
-    "id": "pulse-analytics",
-    "title": "Pulse Analytics",
-    "summary": "A high-density dashboard that compresses key revenue and retention signals into a single operator view.",
-    "tech": ["React", "TypeScript", "D3", "Node"],
+    "id": "epitech-vueling-hackathon",
+    "title": "Epitech x Vueling Hackathon",
+    "summary": "Developed an offline translation tool for airplane use.",
+    "tech": ["React.js", "Node.js"],
     "image": "https://images.unsplash.com/photo-1551281044-8c2ccf00a7f7?auto=format&fit=crop&w=1200&q=80",
-    "repoUrl": "https://github.com/",
-    "liveUrl": "https://example.com",
     "featured": true
   },
   {
-    "id": "frame-commerce",
-    "title": "Frame Commerce",
-    "summary": "A modular storefront framework with progressive media loading and frictionless checkout states.",
-    "tech": ["React", "Tailwind", "Vite", "Stripe"],
+    "id": "epitech-onepoint-hackathon",
+    "title": "Epitech x Onepoint Hackathon",
+    "summary": "Created an eco-responsible chatbot.",
+    "tech": ["React.js", "Node.js", "Ollama"],
     "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
-    "repoUrl": "https://github.com/",
-    "liveUrl": "https://example.com",
     "featured": true
   },
   {
-    "id": "atlas-docs",
-    "title": "Atlas Docs",
-    "summary": "A developer docs portal with semantic search, adaptive navigation, and role-aware content surfacing.",
-    "tech": ["React", "TypeScript", "Search", "MDX"],
+    "id": "area",
+    "title": "AREA",
+    "summary": "Built an automation platform similar to IFTTT, with triggers and actions across GitHub, Discord, and Spotify.",
+    "tech": ["Vue.js", "Go", "Gin", "GORM", "PostgreSQL", "OAuth"],
     "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-    "repoUrl": "https://github.com/",
-    "liveUrl": "https://example.com",
-    "featured": false
-  },
-  {
-    "id": "novus-onboarding",
-    "title": "Novus Onboarding",
-    "summary": "A guided onboarding suite that reduced setup time by pairing crisp progress states with contextual help.",
-    "tech": ["React", "TypeScript", "Framer Motion", "Testing Library"],
-    "image": "https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&w=1200&q=80",
-    "repoUrl": "https://github.com/",
-    "liveUrl": "https://example.com",
-    "featured": false
-  },
-  {
-    "id": "ops-horizon",
-    "title": "Ops Horizon",
-    "summary": "An operational incident timeline that improves triage with real-time collaboration and escalation trails.",
-    "tech": ["React", "WebSocket", "Redis", "Tailwind"],
-    "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80",
-    "repoUrl": "https://github.com/",
-    "liveUrl": "https://example.com",
     "featured": true
+  },
+  {
+    "id": "r-type",
+    "title": "R-Type",
+    "summary": "Developed a cross-platform game engine and multiplayer R-Type recreation with a custom ECS and real-time networking using Asio.",
+    "tech": ["C++", "Asio", "ECS", "Multiplayer Networking"],
+    "image": "https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&w=1200&q=80",
+    "featured": false
   }
 ]

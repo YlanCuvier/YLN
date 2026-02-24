@@ -36,7 +36,7 @@ const treeFolders: TreeFolder[] = [
   {
     name: 'about',
     route: '/about',
-    hint: 'profile and principles',
+    hint: 'profile and background',
     files: [
       { name: 'intro.md', route: '/about', sectionId: 'about-intro' },
       { name: 'principles.yml', route: '/about', sectionId: 'about-principles' },
@@ -46,7 +46,7 @@ const treeFolders: TreeFolder[] = [
   {
     name: 'projects',
     route: '/projects',
-    hint: 'work archive and filters',
+    hint: 'project archive and filters',
     files: [
       { name: 'overview.md', route: '/projects', sectionId: 'projects-overview' },
       { name: 'filters.conf', route: '/projects', sectionId: 'projects-filters' },
@@ -56,7 +56,7 @@ const treeFolders: TreeFolder[] = [
   {
     name: 'contact',
     route: '/contact',
-    hint: 'reach out and links',
+    hint: 'direct contact and links',
     files: [
       { name: 'inbox.sh', route: '/contact', sectionId: 'contact-form' },
       { name: 'direct.txt', route: '/contact', sectionId: 'contact-direct' },
@@ -68,9 +68,10 @@ const treeFolders: TreeFolder[] = [
 const sectionBufferContent: Record<string, string[]> = {
   'about-intro': [
     '" about/intro.md',
-    'bio: Product-focused frontend engineer with systems mindset.',
-    'focus: fast interfaces, clear architecture, maintainable code.',
-    'skills: React, TypeScript, design systems, motion choreography.',
+    'name: Ylan Cuvier',
+    'headline: Developer in Training - Epitech | Freelance / Self-Employed.',
+    'summary: seeking a 4-month internship in web/mobile development.',
+    'stack: PHP, JavaScript, Python, C++, Go, SQL, Vue.js, Nuxt.js, React.',
     '',
     'related buffers:',
     '  - about/principles.yml',
@@ -78,12 +79,12 @@ const sectionBufferContent: Record<string, string[]> = {
   ],
   'about-principles': [
     '" about/principles.yml',
-    'principles:',
-    '  - signal_over_noise',
-    '  - narrative_through_motion',
-    '  - resilience_by_default',
+    'sections:',
+    '  - professional_experience',
+    '  - education',
+    '  - languages_and_interests',
     '',
-    'intent: communicate engineering values and decision style.',
+    'intent: provide CV-aligned personal background.',
   ],
   'about-connect': [
     '" about/socials.json',
@@ -94,8 +95,8 @@ const sectionBufferContent: Record<string, string[]> = {
   ],
   'projects-overview': [
     '" projects/overview.md',
-    'summary: archive of shipped work and delivery context.',
-    'layout: card-based scan with editor-like visual treatment.',
+    'summary: selected projects from Epitech and internships.',
+    'includes: Vueling hackathon, Onepoint hackathon, AREA, R-Type.',
     '',
     'next: open filters.conf to refine results.',
   ],
@@ -110,7 +111,7 @@ const sectionBufferContent: Record<string, string[]> = {
   'projects-gallery': [
     '" projects/gallery.list',
     'output: visible project cards after current filter.',
-    'includes: title, summary, tech stack, external links.',
+    'includes: title, summary, and tech stack.',
     '',
     'tip: use tag filters before scanning cards.',
   ],
@@ -123,7 +124,7 @@ const sectionBufferContent: Record<string, string[]> = {
   ],
   'contact-direct': [
     '" contact/direct.txt',
-    'contains: direct email, location, availability.',
+    'contains: direct email, phone, location, availability.',
     'format: compact quick-contact panel.',
     '',
     'target section id: #contact-direct',
@@ -202,7 +203,7 @@ export default function HomePage() {
   const nextZRef = useRef(40);
   const reduceMotion = useReducedMotion();
 
-  usePageMeta('Home', 'Workspace-style portfolio home with floating Vim windows for folders and file summaries.');
+  usePageMeta('Home', 'Portfolio home for Ylan Cuvier with editor-style navigation across CV sections.');
 
   const openWindow = useCallback((data: Omit<WorkspaceWindowModel, 'id' | 'x' | 'y' | 'width' | 'height' | 'zIndex'>) => {
     setWindows((previous) => {
@@ -358,7 +359,7 @@ export default function HomePage() {
           className="overflow-hidden rounded-xl border border-[#1a3323] bg-[#060d08]/95 shadow-card"
         >
           <header className="flex flex-wrap items-center justify-between gap-3 border-b border-[#1b3724] px-4 py-2 font-body text-[10px] uppercase tracking-[0.2em] text-frost sm:px-6">
-            <span>ylan@portfolio:~$ tree ./pages</span>
+            <span>ylan.cuvier@portfolio:~$ tree ./pages</span>
             <span className="rounded border border-[#1b3724] bg-[#08130d] px-2 py-1 text-[9px] tracking-[0.18em] text-[#83a598]">
               click file/folder to open buffer
             </span>

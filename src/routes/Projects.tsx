@@ -9,7 +9,7 @@ import type { Project } from '../types/content';
 const projects = projectsData as Project[];
 
 export default function ProjectsPage() {
-  usePageMeta('Projects', 'Selected frontend and product engineering projects by Elias Vance.');
+  usePageMeta('Projects', 'Selected hackathon and engineering projects by Ylan Cuvier.');
 
   const tags = useMemo(() => {
     const all = new Set<string>();
@@ -32,7 +32,7 @@ export default function ProjectsPage() {
   return (
     <PageContainer
       title="Projects"
-      subtitle="A command-driven archive of shipped product work, organized by stack and delivery context."
+      subtitle="Hackathon and engineering projects with delivery context, stack, and technical focus."
       fileName="projects.tsx"
       commandHint=":open projects.tsx"
       statusHint={`[${visibleProjects.length}] matches`}
@@ -40,8 +40,8 @@ export default function ProjectsPage() {
       <section id="projects-overview" className="scroll-mt-36 rounded-sm border border-[#4f4232] bg-[#17130f]/95 p-5 font-body sm:p-6">
         <TypedText text="ls -la ./projects" className="mb-3 text-[11px] uppercase tracking-[0.2em] text-[#fabd2f]" speed={16} delay={140} />
         <p className="max-w-3xl text-sm leading-relaxed text-[#d5c4a1]">
-          Use filters to narrow the list. Each item shows context, tools, and links, formatted like editor buffers for fast
-          scanning.
+          Includes Epitech hackathons, the AREA automation platform, and the R-Type multiplayer engine project. Use tech
+          filters to narrow the list.
         </p>
       </section>
 

@@ -1,27 +1,31 @@
 {
-  "name": "Elias Vance",
-  "headline": "Product-focused Frontend Engineer crafting cinematic digital experiences.",
-  "bio": "I build resilient interfaces that turn complex workflows into clear, engaging moments. My process blends systems thinking with visual storytelling, so products feel both fast and memorable.",
+  "name": "Ylan Cuvier",
+  "headline": "Developer in Training - Epitech | Freelance / Self-Employed",
+  "bio": "Junior Developer and Freelancer currently seeking a 4-month internship in web or mobile development from March 31 to July 31.",
   "skills": [
+    "PHP",
+    "JavaScript",
+    "Python",
+    "C++",
+    "Go",
+    "SQL",
+    "Vue.js",
+    "Nuxt.js",
     "React",
-    "TypeScript",
-    "Design Systems",
-    "Motion Design",
-    "Performance Tuning",
-    "Accessibility"
+    "Node.js"
   ],
   "socials": [
     {
-      "label": "GitHub",
-      "url": "https://github.com/"
-    },
-    {
       "label": "LinkedIn",
-      "url": "https://linkedin.com/"
+      "url": "https://www.linkedin.com/in/ylan-cuvier/"
     },
     {
       "label": "Email",
-      "url": "mailto:hello@eliasvance.dev"
+      "url": "mailto:ylan.cuvier@epitech.eu"
+    },
+    {
+      "label": "Phone",
+      "url": "tel:+33612646319"
     }
   ]
 }
