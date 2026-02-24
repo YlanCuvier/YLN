@@ -1,0 +1,39 @@
+@import './styles/theme.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-night);
+  color: var(--color-ivory);
+  letter-spacing: 0.01em;
+}
+
+a {
+  color: inherit;
+}
+
+.editor-grid {
+  background-image:
+    linear-gradient(to right, rgba(99, 212, 141, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(99, 212, 141, 0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.noise-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.24'/%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
