@@ -23,7 +23,7 @@ function GradientBlindsBackground() {
       ) : (
         <GradientBlinds
           className="app-background-canvas"
-          gradientColors={['#03030a', '#120d2a', '#3c1967', '#a03dff', '#ff4fbc']}
+          gradientColors={['#000000', '#222222', '#6B1200', '#8C1C00', '#E84515']}
           angle={22}
           noise={0.14}
           blindCount={14}
