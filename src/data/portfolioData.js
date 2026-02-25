@@ -1,12 +1,3 @@
-const experienceStart = new Date(2024, 8, 1);
-
-function calculateExperienceYears(startDate) {
-  const now = new Date();
-  const totalMonths = (now.getFullYear() - startDate.getFullYear()) * 12 + (now.getMonth() - startDate.getMonth());
-  const years = Math.max(1, Math.floor(totalMonths / 12));
-  return `${years}+`;
-}
-
 const projects = [
   {
     name: 'Epitech x Vueling Hackathon',
@@ -58,11 +49,46 @@ export const portfolioData = {
     availability: 'Open to web and mobile development internship opportunities.'
   },
   metrics: [
-    { label: 'Years of Experience', value: calculateExperienceYears(experienceStart) },
-    { label: 'Projects Shipped', value: `${projects.length}+` },
-    { label: 'Working Languages', value: `${languages.length}` }
+    { label: 'Years of Experience', value: '3' },
+    { label: 'Project', value: '20+' },
+    { label: 'Hackathon', value: '5+' }
   ],
-  keywords: ['Vue.js', 'Nuxt.js', 'React', 'Node.js', 'Go', 'PHP', 'SQL', 'Docker', 'Tailwind CSS'],
+  keywords: [
+    'PHP',
+    'JavaScript',
+    'Python',
+    'C',
+    'C++',
+    'Go',
+    'SQL',
+    'HTML',
+    'CSS',
+    'Haskell',
+    'Assembly',
+    'Vue.js',
+    'Nuxt.js',
+    'React',
+    'Node.js',
+    'Gin',
+    'Twig',
+    'Tailwind CSS',
+    'Git',
+    'GitHub',
+    'Docker',
+    'Postman',
+    'phpMyAdmin',
+    'GORM',
+    'REST API',
+    'OAuth',
+    'Object-Oriented Programming',
+    'GitHub Copilot',
+    'Google Gemini',
+    'Codex',
+    'ChatGPT',
+    'Linux',
+    'Bash',
+    'Shell scripting'
+  ],
   projects,
   experience: [
     {

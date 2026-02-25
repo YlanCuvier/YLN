@@ -119,6 +119,44 @@ ul {
   backdrop-filter: blur(8px);
 }
 
+.nav-progress-wrap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  pointer-events: none;
+}
+
+.nav-progress {
+  width: clamp(7rem, 19vw, 13rem);
+  height: 0.42rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #0000004A;
+  overflow: hidden;
+}
+
+.nav-progress-fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-origin: left center;
+  transform: scaleX(0);
+  background: linear-gradient(90deg, var(--accent-soft) 0%, var(--accent-strong) 100%);
+  transition: transform 120ms linear;
+}
+
+.nav-progress-value {
+  min-width: 3ch;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+  text-align: right;
+}
+
 .brand {
   display: inline-flex;
   align-items: center;
@@ -297,19 +335,32 @@ h1 {
 .keyword-marquee {
   margin-top: 1.2rem;
   border-block: 1px solid var(--line);
+}
+
+.keyword-marquee-viewport {
   overflow: hidden;
 }
 
 .keyword-track {
+  --marquee-gap: 0.7rem;
   display: flex;
   width: max-content;
-  gap: 0.7rem;
   padding: 0.8rem 0;
-  animation: loop 24s linear infinite;
+  animation: loop var(--marquee-duration, 24s) linear infinite;
+  will-change: transform;
+}
+
+.keyword-group {
+  display: flex;
+  flex-shrink: 0;
+  gap: var(--marquee-gap);
+  padding-right: var(--marquee-gap);
 }
 
 .keyword-pill {
   display: inline-block;
+  flex-shrink: 0;
+  white-space: nowrap;
   border: 1px solid var(--line);
   border-radius: 999px;
   padding: 0.42rem 0.85rem;
@@ -625,7 +676,7 @@ button:focus-visible,
 
 @keyframes loop {
   to {
-    transform: translateX(-50%);
+    transform: translateX(calc(-1 * var(--marquee-shift, 0px)));
   }
 }
 
@@ -673,6 +724,14 @@ button:focus-visible,
     border-radius: 18px;
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .nav-progress-wrap {
+    position: static;
+    transform: none;
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 0.2rem;
   }
 
   .nav-list {

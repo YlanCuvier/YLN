@@ -1,27 +1,55 @@
-# Background Color
-* **Hex:** `#D96727`
-* **Description:** A warm, deep orange color used for the solid background.
+# Active Color Inventory
 
-## Portrait Colors (Greyscale)
-The portrait is rendered entirely in shades of grey, ranging from black to near-white, creating the 3D low-poly effect.
+## Base Colors
+* **Hex:** `#D96727`  
+  **Description:** Primary orange for background, accents, gradients, and glow effects.
+* **Hex:** `#A64A1C`  
+  **Description:** Strong accent orange used for emphasis and gradient depth.
+* **Hex:** `#B35320`  
+  **Description:** Soft accent orange for brand marks and gradient transitions.
+* **Hex:** `#8C3E17`  
+  **Description:** Deep orange stop used in the animated background gradient.
+* **Hex:** `#000000`  
+  **Description:** Black base used in dark gradients and background depth.
+* **Hex:** `#1A1A1A`  
+  **Description:** Primary dark panel tone and gradient stop.
+* **Hex:** `#333333`  
+  **Description:** Secondary dark neutral used for panels and gradients.
+* **Hex:** `#4D4D4D`  
+  **Description:** Border and divider line color.
+* **Hex:** `#CCCCCC`  
+  **Description:** Secondary text color (`ink-soft`).
+* **Hex:** `#E6E6E6`  
+  **Description:** Primary foreground/text color (`ink`).
 
-* **Hex:** `#000000`
-    * **Description:** Solid black, used for the t-shirt, eyebrows, and darkest shadows.
-* **Hex:** `#1A1A1A`
-    * **Description:** Very dark grey, used for deep shadows.
-* **Hex:** `#333333`
-    * **Description:** Dark grey, used for shadows.
-* **Hex:** `#4D4D4D`
-    * **Description:** Medium-dark grey.
-* **Hex:** `#666666`
-    * **Description:** Medium grey.
-* **Hex:** `#808080`
-    * **Description:** Mid-grey.
-* **Hex:** `#999999`
-    * **Description:** Medium-light grey.
-* **Hex:** `#B3B3B3`
-    * **Description:** Light grey.
-* **Hex:** `#CCCCCC`
-    * **Description:** Very light grey, used for highlights.
-* **Hex:** `#E6E6E6`
-    * **Description:** Near-white, used for the brightest highlights on the face and hair.
+## Alpha Variants (Used Directly)
+* **Hex:** `#D9672799`  
+  **Description:** Orange radial overlay (background atmosphere).
+* **Hex:** `#D96727CC`  
+  **Description:** Strong orange radial overlay in motion fallback background.
+* **Hex:** `#D9672740`  
+  **Description:** Subtle orange radial overlay in hero photo shell.
+* **Hex:** `#D9672733`  
+  **Description:** Soft orange shadow tint on CTA button.
+* **Hex:** `#A64A1C80`  
+  **Description:** Medium-opacity accent radial overlay.
+* **Hex:** `#A64A1CA6`  
+  **Description:** Stronger accent radial overlay in fallback background.
+* **Hex:** `#333333CC`  
+  **Description:** Dark neutral overlay used in full-screen gradient.
+* **Hex:** `#000000CC`  
+  **Description:** Deep black overlay used in full-screen gradient.
+* **Hex:** `#1A1A1ADE`  
+  **Description:** Sticky header backdrop tone with transparency.
+* **Hex:** `#1A1A1AE8`  
+  **Description:** Hero photo status badge background tone.
+* **Hex:** `#0000004A`  
+  **Description:** Progress track background with transparency.
+* **Hex:** `#00000075`  
+  **Description:** Hero photo shell drop shadow.
+
+## Favicon Colors
+* **Hex:** `#0B7D6E`  
+  **Description:** Favicon background color.
+* **Hex:** `#FFFAF1`  
+  **Description:** Favicon monogram foreground color.
