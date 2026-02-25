@@ -1,32 +1,106 @@
 const projects = [
   {
-    name: 'Epitech x Vueling Hackathon',
-    context: 'Hackathon Project',
-    description: 'Built an offline translation tool designed for airplane use cases with unstable connectivity.',
-    stack: ['React.js', 'Node.js'],
-    type: 'Web Application'
+    name: '42SH',
+    context: 'Systems Programming Project',
+    description: 'Recreation of a Linux terminal shell in C.',
+    stack: ['C', 'Linux', 'System Programming'],
+    type: 'Command-Line Interface'
   },
   {
-    name: 'Epitech x Onepoint Hackathon',
-    context: 'Hackathon Project',
-    description: 'Created an eco-responsible chatbot focused on sustainable decision support workflows.',
-    stack: ['React.js', 'Node.js', 'Ollama'],
-    type: 'Conversational AI'
+    name: 'Arcade',
+    context: 'Game Platform Project',
+    description: 'Cross-platform modular game platform with interchangeable graphical libraries.',
+    stack: ['C++', 'OOP', 'SFML', 'Ncurses'],
+    type: 'Game Platform'
   },
   {
-    name: 'AREA',
+    name: 'Raytracer',
+    context: 'Computer Graphics Project',
+    description:
+      'Rendering project focused on generating realistic digital images by simulating reverse light paths.',
+    stack: ['C++', 'SFML', 'Computer Graphics', 'Mathematics'],
+    type: 'Rendering Engine'
+  },
+  {
+    name: 'Area',
     context: 'Automation Platform',
-    description: 'Developed an automation platform inspired by IFTTT to synchronize actions across services.',
-    stack: ['Vue.js', 'Go', 'Gin', 'GORM', 'PostgreSQL', 'OAuth'],
+    description:
+      'Automation platform with Go (Gin) backend, PostgreSQL, OAuth integrations, and a Swift mobile app.',
+    stack: ['Vue.js', 'PostgreSQL', 'Golang', 'Swift', 'Gin', 'OAuth'],
     type: 'Fullstack Platform'
   },
   {
-    name: 'R-Type',
-    context: 'Game Engine Project',
+    name: 'Image Compressor',
+    context: 'Functional Programming Project',
+    description: 'Program to compress images in Haskell on Unix systems.',
+    stack: ['Haskell', 'Unix'],
+    type: 'Image Processing Tool'
+  },
+  {
+    name: 'ASM MiniLibc',
+    context: 'Low-Level Systems Project',
+    description: 'Dynamic library implementation in x86-64 assembly language.',
+    stack: ['Assembly', 'x86-64', 'System Programming', 'Unix'],
+    type: 'Systems Library'
+  },
+  {
+    name: 'My RPG',
+    context: 'Game Development Project',
+    description: 'RPG game project built with CSFML in C.',
+    stack: ['Graphical', 'CSFML', 'C'],
+    type: 'RPG Game'
+  },
+  {
+    name: 'Corewar',
+    context: 'Virtual Machine Project',
     description:
-      'Engineered a cross-platform game engine and multiplayer R-Type recreation with custom ECS and real-time networking.',
-    stack: ['C++', 'Asio', 'ECS', 'Networking'],
+      'Virtual machine capable of executing programs written in assembly language.',
+    stack: ['Unix', 'Assembly', 'Virtual Machine'],
+    type: 'Virtual Machine'
+  },
+  {
+    name: 'R-type',
+    context: 'Featured Game Project',
+    description:
+      "2D shoot'em up where a team of 4 spaceships fights enemies in a networked multiplayer setup.",
+    stack: ['Graphical', 'Unix', 'Network', 'C++'],
     type: 'Game Development'
+  },
+  {
+    name: 'Gomoku',
+    context: 'Featured AI Project',
+    description: 'Artificial intelligence project aiming to always win at Gomoku in Python.',
+    stack: ['Python', 'AI', 'Algorithms'],
+    type: 'AI Strategy Engine'
+  },
+  {
+    name: 'The Plazza',
+    context: 'Featured Concurrency Project',
+    description: 'Pizzeria simulation and management system using C++ threads and processes.',
+    stack: ['C++', 'Threads', 'Processes', 'Unix'],
+    type: 'Concurrent Systems'
+  },
+  {
+    name: 'Hackathon ONEPOINT (Podium)',
+    context: 'Featured Hackathon Project',
+    description: 'Built a website in 5 hours with React and a local Ollama chatbot.',
+    stack: ['React', 'Chatbot', 'Ollama'],
+    type: 'Rapid Prototype'
+  },
+  {
+    name: 'Zappy',
+    context: 'Featured Multiplayer Project',
+    description:
+      'Multiplayer network game on a toroidal world where teams gather resources and coordinate elevation rituals.',
+    stack: ['C++', 'OOP', 'Network', 'Multiplayer'],
+    type: 'Network Game'
+  },
+  {
+    name: 'Hackathon VUELING',
+    context: 'Featured Hackathon Project',
+    description: 'Local AI for real-time translation of in-flight safety instructions.',
+    stack: ['AI', 'Translation'],
+    type: 'AI Translation Prototype'
   }
 ];
 

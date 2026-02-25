@@ -397,6 +397,155 @@ h3 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.projects-3d-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.project-3d-card {
+  --card-glow-x: 50%;
+  --card-glow-y: 40%;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
+  gap: 0.95rem;
+  align-items: stretch;
+  min-height: 288px;
+  border: 1px solid #5A493D;
+  border-radius: 20px;
+  padding: 1.05rem;
+  background:
+    linear-gradient(145deg, #1B1714 0%, #11100E 48%, #0A0A0A 100%),
+    linear-gradient(30deg, #D9672724 0%, transparent 58%);
+  box-shadow: 0 20px 30px #00000075;
+  transition: box-shadow 240ms ease, border-color 220ms ease;
+  isolation: isolate;
+  clip-path: polygon(0 18px, 18px 0, calc(100% - 18px) 0, 100% 18px, 100% calc(100% - 18px), calc(100% - 18px) 100%, 18px 100%, 0 calc(100% - 18px));
+}
+
+.project-3d-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 14% 16%, #FFFFFF10 0, transparent 36%),
+    linear-gradient(145deg, #FFFFFF0D 0%, transparent 42%),
+    repeating-linear-gradient(-42deg, #FFFFFF06 0 1px, transparent 1px 15px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.project-3d-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--card-glow-x) var(--card-glow-y), #D9672744 0, transparent 42%);
+  opacity: 0;
+  transition: opacity 220ms ease;
+  pointer-events: none;
+}
+
+.project-3d-card.is-hovered,
+.project-3d-card:focus-visible {
+  border-color: #9A6447;
+  box-shadow: 0 22px 32px #0000008F;
+}
+
+.project-3d-card.is-hovered::after,
+.project-3d-card:focus-visible::after {
+  opacity: 1;
+}
+
+.project-3d-card:focus-visible {
+  outline: 2px solid #D96727;
+  outline-offset: 3px;
+}
+
+.project-3d-content,
+.project-3d-scene-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.project-3d-content {
+  display: grid;
+  align-content: start;
+  gap: 0.72rem;
+}
+
+.project-3d-content h3 {
+  font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+}
+
+.project-3d-description {
+  color: var(--ink-soft);
+  line-height: 1.56;
+}
+
+.project-3d-content .project-type {
+  margin-top: 0.12rem;
+}
+
+.project-3d-content .stack-list li {
+  border-color: #5D4E43;
+  background: #151210;
+}
+
+.project-3d-scene-wrap {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid #6A503E;
+  background:
+    radial-gradient(circle at 36% 22%, #D9672742 0, transparent 55%),
+    linear-gradient(160deg, #28201B 0%, #121212 76%);
+  min-height: 100%;
+}
+
+.project-3d-scene-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, #FFFFFF10 0%, transparent 28%),
+    linear-gradient(120deg, transparent 45%, #FFFFFF08 47%, transparent 52%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.project-3d-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.project-3d-scene-fallback {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  background:
+    linear-gradient(145deg, #D9672742 0%, transparent 52%),
+    conic-gradient(from 220deg at 70% 45%, #A64A1C 0deg, #5A2A10 120deg, #1B130D 290deg, #A64A1C 360deg);
+}
+
+.project-3d-scene-fallback span {
+  max-width: min(90%, 16ch);
+  text-align: center;
+  line-height: 0.92;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(1.2rem, 2.1vw, 1.7rem);
+  color: #F4E5CF;
+  text-shadow:
+    -1px 0 #2E211A,
+    0 1px #2E211A,
+    1px 0 #2E211A,
+    0 -1px #2E211A;
+}
+
 .panel-card {
   position: relative;
   background: var(--panel);
@@ -436,6 +585,7 @@ h3 {
 }
 
 .project-card p,
+.project-3d-content p,
 .timeline-item p,
 .tool-card p,
 .thought-card p,
@@ -690,6 +840,7 @@ button:focus-visible,
   }
 
   .thoughts-grid,
+  .projects-3d-grid,
   .projects-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -697,6 +848,16 @@ button:focus-visible,
   .contact-layout,
   .split-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .project-3d-card {
+    grid-template-columns: 1fr;
+  }
+
+  .project-3d-scene-wrap {
+    min-height: 220px;
   }
 }
 
@@ -740,9 +901,15 @@ button:focus-visible,
 
   .metrics-grid,
   .thoughts-grid,
+  .projects-3d-grid,
   .projects-grid,
   .tools-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-3d-card {
+    min-height: auto;
+    padding: 0.92rem;
   }
 
   .site-footer {
